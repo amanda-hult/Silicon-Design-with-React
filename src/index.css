@@ -457,6 +457,11 @@ body {
   text-decoration: none;
   display: none;
   color: var(--font-color-primary);
+
+  &.active {
+    font-weight: 600;
+    color: var(--accent-color);
+  }
 }
 .nav-link:hover {
   color: var(--accent-color);

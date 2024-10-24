@@ -1,6 +1,7 @@
 import React from 'react'
 import DarkModeToggle from './DarkModeToggle'
 import Sidebar from './Sidebar'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -9,10 +10,10 @@ const Header = () => {
         <nav className="main-navigation">
 
           <div className="logo-container">
-            <a href="#" className="logo-link"><img className="logo-image" src="/public/silicon-logo.svg" alt="Silicon logo" /></a>
+            <Link to="/" className="logo-link"><img className="logo-image" src="/silicon-logo.svg" alt="Silicon logo" /></Link>
             <h1 className="s-heading">Silicon</h1>
-            <a className="nav-link" href="#app-features">Features</a>
-            <a className="nav-link">Contact</a>
+            <NavLink className="nav-link" to="/">Features</NavLink>
+            <NavLink className="nav-link" to="/contact">Contact</NavLink>
           </div>
 
           <DarkModeToggle />

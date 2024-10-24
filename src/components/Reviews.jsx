@@ -17,7 +17,7 @@ function Reviews() {
             </div>
             <p className="m-font">Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>          
             <div className="reviewer">
-              <img src="public/profile-picture-1.svg" />
+              <img src="/profile-picture-1.svg" />
               <p className="x-bold">Fannie Summers<br /><span className="s-font">Designer</span></p>
             </div>
           </div>
@@ -33,7 +33,7 @@ function Reviews() {
             </div>
             <p className="m-font">Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>                
             <div className="reviewer">
-              <img src="public/profile-picture-2.svg" />
+              <img src="/profile-picture-2.svg" />
               <p className="x-bold">Albert Flores<br /><span className="s-font">Developer</span></p>
             </div>
           </div>

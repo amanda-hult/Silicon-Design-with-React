@@ -15,17 +15,17 @@ function AppInfo() {
             <a className="learn-more-btn" href="#">Learn more <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></a>
           </div>
 
-          <img src="public/app-history.svg" />
-          <img src="public/app-conversations.svg" />
+          <img src="/app-history.svg" />
+          <img src="/app-conversations.svg" />
 
           <div className="payment-details">
             <h2 className="m-heading">Receive payment from <br />international bank details</h2>
             <div className="payment-info">
-              <img src="public/payment-icon.svg" />
+              <img src="/payment-icon.svg" />
               <p className="m-font">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
             </div>
             <div className="payment-info">  
-              <img src="public/cashback-icon.svg" />
+              <img src="/cashback-icon.svg" />
               <p className="m-font">A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
             </div>
             <a className="learn-more-btn" href="#">Learn more <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></a>

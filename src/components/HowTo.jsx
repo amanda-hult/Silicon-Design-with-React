@@ -8,15 +8,15 @@ function HowTo() {
           <h2 className="m-heading p-tb-1">How Does It Work?</h2>
 
           <div className="sc-pics-mobile p-tb-1">
-              <img className="sc" src="public/sc-mobile.svg" alt="App illustration" />
+              <img className="sc" src="/sc-mobile.svg" alt="App illustration" />
           </div>
           
           <div className="sc-pics-tablet p-tb-1">
-              <img className="sc-bg-tablet" src="public/iphone-bg-tablet.svg" alt="iPhone 12" />
+              <img className="sc-bg-tablet" src="/iphone-bg-tablet.svg" alt="iPhone 12" />
 
-              <img className="sc" src="public/sc-2-tablet.svg" alt="App illustration" />
-              <img className="sc" src="public/sc-1-tablet.svg" alt="App illustration" />
-              <img className="sc" src="public/sc-3-tablet.svg" alt="App illustration" />
+              <img className="sc" src="/sc-2-tablet.svg" alt="App illustration" />
+              <img className="sc" src="/sc-1-tablet.svg" alt="App illustration" />
+              <img className="sc" src="/sc-3-tablet.svg" alt="App illustration" />
           </div>
 
           <div className="mobile-text">
@@ -31,18 +31,18 @@ function HowTo() {
               <input type="radio" name="slider" id="sc-3" />
 
               <div className="slides">
-                <img src="public/iphone-bg-desktop.svg" alt="iPhone 12" />
+                <img src="/iphone-bg-desktop.svg" alt="iPhone 12" />
                 
                 <label className="card" htmlFor="sc-1" id="img-1">
-                  <img src="public/sc-1-desktop.svg" alt="App illustration" />
+                  <img src="/sc-1-desktop.svg" alt="App illustration" />
                 </label>
                 
                 <label className="card" htmlFor="sc-2" id="img-2">
-                  <img src="public/sc-2-desktop.svg" alt="App illustration" />
+                  <img src="/sc-2-desktop.svg" alt="App illustration" />
                 </label>
 
                 <label className="card" htmlFor="sc-3" id="img-3">
-                  <img src="public/sc-3-desktop.svg" alt="App illustration" />
+                  <img src="/sc-3-desktop.svg" alt="App illustration" />
                 </label>
               </div>
 

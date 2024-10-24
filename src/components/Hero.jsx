@@ -10,8 +10,8 @@ function Hero() {
           <div className="content">
             <p className="l-font">We offer you a new generation of the mobile banking. <br className="line-break" />Save, spend & manage money in your pocket.</p>
             <div className="market-btns">
-              <a className="btn-app" href="#"><img id="theme-image-apple" src="public/appstore.svg" alt="AppStore button" /></a>
-              <a className="btn-app" href="#"><img id="theme-image-google" src="public/googleplay.svg" alt="GooglePlay button" /></a>  
+              <a className="btn-app" href="#"><img id="theme-image-apple" src="/appstore.svg" alt="AppStore button" /></a>
+              <a className="btn-app" href="#"><img id="theme-image-google" src="/googleplay.svg" alt="GooglePlay button" /></a>  
             </div>
             <div>
               <a className="expand" href="#app-features"><span><i className="arrow-btn fa-regular fa-angle-down"></i></span><span className="s-font discover-more">Discover more</span></a>
@@ -19,8 +19,8 @@ function Hero() {
           </div> 
 
           <div className="app-illustration" >
-            <img className="img-back" src="public/app-on-iphone-budget.svg" alt="App on Iphone your budget" />
-            <img className="img-front" src="public/app-on-iphone-transactions.svg" alt="App on Iphone your cards" />
+            <img className="img-back" src="/app-on-iphone-budget.svg" alt="App on Iphone your budget" />
+            <img className="img-front" src="/app-on-iphone-transactions.svg" alt="App on Iphone your cards" />
           </div>
         </div>
       </section>

@@ -1,32 +1,25 @@
 import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
 import Header from './components/header/Header'
-import Hero from './components/Hero'
-import Features from './components/features/Features'
-import HowTo from './components/HowTo'
-import AppInfo from './components/AppInfo'
-import Reviews from './components/Reviews'
-import Faq from './components/faq/Faq'
 import Footer from './components/Footer'
-import Subscribe from './components/subscribe/Subscribe'
+
 
 
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+      <Header />
       <main>
-        <Header />
-        <Hero />
-        <Features />
-        <HowTo />
-        <AppInfo />
-        <Reviews />
-        <Faq />
-        <Subscribe />
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/contact" element={<Contact />}/>
+        </Routes>
       </main>
       <Footer />
-        
-    </>
+    </BrowserRouter>
   )
 }
 

@@ -9,8 +9,8 @@ function DarkModeToggle() {
     if (savedTheme === 'dark') {
       setdarkMode(true);
       document.body.classList.add('dark-theme');
-      document.querySelector('#theme-image-apple').src = 'public/appstore-dark.svg';
-      document.querySelector('#theme-image-google').src = 'public/googleplay-dark.svg';
+      document.querySelector('#theme-image-apple').src = '/appstore-dark.svg';
+      document.querySelector('#theme-image-google').src = '/googleplay-dark.svg';
     }
   }, []);
   
@@ -19,13 +19,13 @@ function DarkModeToggle() {
     
     if(!darkMode) {
       document.body.classList.add('dark-theme');
-      document.querySelector('#theme-image-apple').src = 'public/appstore-dark.svg';
-      document.querySelector('#theme-image-google').src = 'public/googleplay-dark.svg';
+      document.querySelector('#theme-image-apple').src = '/appstore-dark.svg';
+      document.querySelector('#theme-image-google').src = '/googleplay-dark.svg';
       localStorage.setItem('theme', 'dark');
     } else {
       document.body.classList.remove('dark-theme');
-      document.querySelector('#theme-image-apple').src = 'public/appstore.svg';
-      document.querySelector('#theme-image-google').src = 'public/googleplay.svg';
+      document.querySelector('#theme-image-apple').src = '/appstore.svg';
+      document.querySelector('#theme-image-google').src = '/googleplay.svg';
       localStorage.setItem('theme', 'light');
     }
   }
