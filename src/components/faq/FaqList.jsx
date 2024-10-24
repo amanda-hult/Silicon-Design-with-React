@@ -31,7 +31,7 @@ function FaqList() {
     id: 6,
     question: 'What happens if I forget or lose my password?',
     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio maiores perspiciatis facilis est quod doloribus ipsum voluptatibus, tempore placeat omnis nulla odit odio id at quaerat recusandae. Obcaecati accusantium eos fugit ullam placeat ratione architecto sunt, quam sapiente cum unde quas velit commodi dolor iure voluptatum porro? Earum, aperiam veniam deserunt sunt quibusdam praesentium quod blanditiis vel, repudiandae nemo quasi dicta ipsam natus omnis! Dolores optio maxime odit iste dolore aspernatur a ducimus maiores explicabo.'
-  },
+  }
 ];
 
   const [expanded, setExpanded] = useState([]);
