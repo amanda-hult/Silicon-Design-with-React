@@ -1,5 +1,6 @@
 import React from 'react'
 import FaqList from './FaqList'
+import ContactCard from './ContactCard'
 
 function Faq() {
   return (
@@ -18,25 +19,7 @@ function Faq() {
           </div>
             
           <div id="contact-info-section">
-            <div className="contact-info p-tb-1">
-              <div className="contact-phone">
-                <a href="#" className="phone-icon">
-                  <i className="fa-solid fa-phone-volume fa-xl fa-hover-hidden"></i>
-                  <i className="fa-solid fa-phone-volume fa-shake fa-xl fa-hover-show"></i>
-                </a>
-                <p className="s-font">Still have questions?</p>
-                <a href="#">Contact us <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></a>
-              </div>
-
-              <div className="contact-msg">
-                <a href="#" className="msg-icon">
-                  <i className="fa-solid fa-comment-dots fa-2xl fa-hover-hidden"></i>
-                  <i className="fa-solid fa-comment-dots fa-bounce fa-2xl fa-hover-show"></i>
-                </a>
-                <p className="s-font">Don't like phone calls?</p>
-                <a href="#">Contact us <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></a>
-              </div>
-            </div>
+            <ContactCard />
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,10 +23,10 @@ function Sidebar() {
           <span className="line bottom-line"></span>
         </label>
         </li>
-        <li><a href="#" onClick={() => hideSidebar()}>Sign in / up</a></li>
-        <li><a href="#app-features" onClick={() => hideSidebar()}>Features</a></li>
-        <li><a href="#faq-section" onClick={() => hideSidebar()}>FAQs</a></li>
-        <li><a href="#contact-info-section" onClick={() => hideSidebar()}>Contact</a></li>
+        <li><Link href="#" onClick={() => hideSidebar()}>Sign in / up</Link></li>
+        <li><Link href="#app-features" onClick={() => hideSidebar()}>Features</Link></li>
+        <li><Link href="#faq-section" onClick={() => hideSidebar()}>FAQs</Link></li>
+        <li><Link to="/contact" onClick={() => hideSidebar()}>Contact</Link></li>
       </ul>
 
       <label className="toggle-menu" onChange={() => showSidebar()}>

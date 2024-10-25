@@ -18,7 +18,7 @@ function Hero() {
             </div>
           </div> 
 
-          <div className="app-illustration" >
+          <div className="app-illustration">
             <img className="img-back" src="/app-on-iphone-budget.svg" alt="App on Iphone your budget" />
             <img className="img-front" src="/app-on-iphone-transactions.svg" alt="App on Iphone your cards" />
           </div>

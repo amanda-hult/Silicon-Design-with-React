@@ -1,11 +1,11 @@
 import React from 'react'
+import FeatureItems from './features/FeatureItems'
 
 function AppInfo() {
   return (
-    <>
       <section>
         <div className="app-info p-5">
-          <div className="info-list">
+          <div className="info-list" data-aos="fade-right">
             <h2 className="m-heading">Make your money <br />transfer simple and clear</h2>
             <ul>
               <li className="m-font"><i className="fa-sharp fa-regular fa-circle-check"></i> Banking transactions are free for you</li>
@@ -18,7 +18,7 @@ function AppInfo() {
           <img src="/app-history.svg" />
           <img src="/app-conversations.svg" />
 
-          <div className="payment-details">
+          <div className="payment-details" data-aos="fade-left">
             <h2 className="m-heading">Receive payment from <br />international bank details</h2>
             <div className="payment-info">
               <img src="/payment-icon.svg" />
@@ -32,7 +32,6 @@ function AppInfo() {
           </div>
         </div>
       </section>
-    </>
   )
 }
 

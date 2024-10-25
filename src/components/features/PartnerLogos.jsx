@@ -38,7 +38,7 @@ function PartnerLogos() {
   return (
     <div className="logos">
       {logos.map((logo) => (
-        <img key={logo.id} className={`logo p-1 ${logo.isDesktop ? 'logo-desktop' : ''}`} src={logo.img} />
+        <img key={logo.id} className={`logo p-1 ${logo.isDesktop ? 'logo-desktop' : ''}`} src={logo.img}/>
       ))}
     </div>
   )
