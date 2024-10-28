@@ -1,13 +1,17 @@
 import React from 'react'
 import DarkModeToggle from './DarkModeToggle'
 import Sidebar from './Sidebar'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const Header = () => {
+
+  const location = useLocation();
+  const backgroundColor = location.pathname === '/' ? 'var(--bg-color-header)' : 'var(--bg-color-secondary)';
+
   return (
     <>
-      <header className="header">
-        <nav className="main-navigation">
+      <header className="header" style={{backgroundColor}}>
+        <nav className="main-navigation" style={{backgroundColor}}>
 
           <div className="logo-container">
             <Link to="/" className="logo-link"><img className="logo-image" src="/silicon-logo.svg" alt="Silicon logo" /></Link>

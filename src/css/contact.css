@@ -1,0 +1,264 @@
+.breadcrumb-section {
+  background-color: var(--bg-color-secondary);
+}
+@media (min-width: 1400px) {
+  .breadcrumb-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+}
+.contact-us-section {
+  background-color: var(--bg-color-secondary);
+  text-align: center;
+}
+
+.contact-header {
+  grid-area: contact-header;
+}
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.contact-card {
+  display: grid;
+  padding: .5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.contact-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 5rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.form-container {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  grid-area: contact-form;
+}
+
+.appointment-form {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: .5rem;
+  box-shadow: 5px 5px 10px var(--detail-color1);
+  text-align: left;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid var(--detail-color1);
+  border-radius: .5em;
+  font: inherit;
+  padding: .5em;
+}
+
+.submit-btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: .5em;
+  font-weight: 600;
+  padding: 1rem;
+  width: 100%;
+/*   margin-top: 5rem; */
+}
+
+.invalid-input {
+  color: rgb(207, 15, 15);
+  font-size: .8rem;
+  font-weight: 600;
+  padding-left: .2rem;
+  display: none;
+}
+
+.hide {
+  display: none;
+  text-align: center;
+} 
+
+.direction-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.google-map {
+  position: relative;
+  padding-bottom: 50%;
+}
+.google-map iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+/*   grid-column: 1 / 2;
+  grid-row: 1 / -1; */
+}
+
+.map-link[target="_blank"]::after {
+  content: '\f08e';
+  font-family: "Font Awesome 6 Pro";
+  font-size: .6em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.socials-container {
+  background-color: var(--bg-color-secondary);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.social-icon {
+  /* background-color: #eff2fc; */
+  background-color: var(--bg-color-primary);
+  padding: .5rem;
+  border-radius: .3em;
+  margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-wrapper {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    grid-template-areas: "contact-header contact-header"
+                          "contact-container contact-form";
+  }
+
+  .contact-container {
+    flex-direction: column;
+    grid-area: contact-container;
+    justify-content: space-between;
+  }
+
+  .contact-card {
+    grid-template-columns: 2fr 8fr;
+    text-align: left;
+    gap: 1rem;
+    align-items: center;
+    justify-items: flex-start;
+  }
+
+  .form-container {
+    padding: 0;
+  }
+
+  .hide-mobile {
+    display: block;
+  }
+
+  .google-map {
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .map-link {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-wrapper {
+    max-width: 1320px;
+    position: relative;
+    grid-template-areas: "contact-header contact-form"
+                         "contact-container contact-form";
+  }
+
+  .contact-header {
+    text-align: left;
+  }
+
+  .contact-container {
+    padding: 0;
+  }
+
+  .contact-card {
+    display: flex;
+    padding: 0;
+    justify-items: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 4rem;
+  }
+
+  .form-container {
+    position: relative;
+    bottom: -5rem;
+    right: 5rem;
+  }
+
+  .appointment-form {
+    padding: 4.5rem;
+  }
+  .submit-btn {
+    margin-top: 7rem;
+  }
+
+
+  .wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10rem 1.5rem;
+    gap: 4rem;
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+  .google-map {
+    grid-row: 1 / 3;
+    height: 100%;
+    width: 100%;
+  }
+
+  .direction-container {
+    text-align: left;
+    padding: 0;
+  }
+
+  .socials-container {
+    background-color: var(--bg-color-primary);
+    justify-content: left;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    background-color: var(--bg-color-secondary);
+    padding: 1rem;
+    margin: 0;
+  }
+
+}

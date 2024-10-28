@@ -1,5 +1,6 @@
 import React from 'react'
 import FeatureItems from './features/FeatureItems'
+import { HashLink } from 'react-router-hash-link'
 
 function AppInfo() {
   return (
@@ -12,7 +13,7 @@ function AppInfo() {
               <li className="m-font"><i className="fa-sharp fa-regular fa-circle-check"></i> No monthly cash commission</li>
               <li className="m-font"><i className="fa-sharp fa-regular fa-circle-check"></i> Manage payments and transactions online</li>
             </ul>
-            <a className="learn-more-btn" href="#">Learn more <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></a>
+            <HashLink smooth to="/#hero" className="learn-more-btn">Learn more <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></HashLink>
           </div>
 
           <img src="/app-history.svg" />
@@ -28,7 +29,7 @@ function AppInfo() {
               <img src="/cashback-icon.svg" />
               <p className="m-font">A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
             </div>
-            <a className="learn-more-btn" href="#">Learn more <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></a>
+            <HashLink smooth to="/#hero" className="learn-more-btn">Learn more <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></HashLink>
           </div>
         </div>
       </section>
