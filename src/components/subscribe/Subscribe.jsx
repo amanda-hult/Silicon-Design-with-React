@@ -1,4 +1,5 @@
 import React from 'react'
+import SubscriptionForm from './SubscriptionForm'
 
 function Subscribe() {
   return (
@@ -8,13 +9,7 @@ function Subscribe() {
         <h3 className="s-heading">Subscribe to our newsletter<span className="extended-info"> to stay informed about latest updates</span></h3>
       </div>
 
-      <div>
-        <form className="email-input">
-          <label htmlFor="email"></label>
-          <input className="form-input" type="email" id="email" placeholder="     &#xf003;     Your email" style={{ fontFamily: "Manrope, FontAwesome"}} />
-          <input type="submit" value="Subscribe" />
-        </form>
-      </div>
+      <SubscriptionForm />
     </div>
   )
 }

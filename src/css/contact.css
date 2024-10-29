@@ -83,13 +83,7 @@
   font-size: .8rem;
   font-weight: 600;
   padding-left: .2rem;
-  display: none;
 }
-
-.hide {
-  display: none;
-  text-align: center;
-} 
 
 .direction-container {
   display: flex;
