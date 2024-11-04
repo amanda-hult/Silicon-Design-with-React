@@ -400,6 +400,10 @@ body {
   color: var(--accent-color);
 }
 
+.hover {
+  cursor: pointer;
+}
+
 .header {
   background-color: grey;
 }

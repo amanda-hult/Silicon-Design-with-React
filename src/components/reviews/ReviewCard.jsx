@@ -20,7 +20,7 @@ function ReviewCard() {
 
   return (
     <div className="review-container p-tb-5">
-      <h2 className="xl-heading">Clients are Loving Our App</h2>
+      <h2 className="xl-heading" data-aos="fade-right">Clients are Loving Our App</h2>
 
       {reviews.map((review) => (
         <div key={review.id} className="review-card" data-aos="flip-up" data-aos-duration="800">

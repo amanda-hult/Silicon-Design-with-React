@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function DarkModeToggle({ toggleImages }) {
+function DarkModeToggle({ darkModeToggle }) {
 
   const [darkMode, setdarkMode] = useState(false);
 
@@ -9,23 +9,13 @@ function DarkModeToggle({ toggleImages }) {
     if (savedTheme === 'dark') {
       setdarkMode(true);
       document.body.classList.add('dark-theme');
-      toggleImages(true);
-
-      // const themeImageApple = document.querySelector('theme-image-apple');
-      // const themeImageGoogle = document.querySelector('theme-image-google');
-      // if (themeImageApple) {
-      //   themeImageApple.src = '/appstore-dark.svg';
-      // }
-      // if (themeImageGoogle) {
-      //   themeImageGoogle.src = '/googleplay-dark.svg';
-      // }
+      darkModeToggle(true);
     }
-  }, [toggleImages]);
-  
+  }, [darkModeToggle]);
+
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setdarkMode(newDarkMode);
-
     
     if(newDarkMode) {
       document.body.classList.add('dark-theme');
@@ -35,7 +25,7 @@ function DarkModeToggle({ toggleImages }) {
       localStorage.setItem('theme', 'light');
     }
 
-    toggleImages(newDarkMode);
+    darkModeToggle(newDarkMode);
   }
 
   return (
@@ -50,5 +40,3 @@ function DarkModeToggle({ toggleImages }) {
 }
 
 export default DarkModeToggle
-
-

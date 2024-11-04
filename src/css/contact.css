@@ -36,7 +36,7 @@
 }
 
 .contact-icon {
-  background-color: #fff;
+  background-color: var(--bg-color-primary);
   border-radius: 50%;
   width: 5rem;
   aspect-ratio: 1;
@@ -52,19 +52,26 @@
 }
 
 .appointment-form {
-  background-color: #fff;
+  background-color: var(--bg-color-primary);
   padding: 1rem;
   border-radius: .5rem;
   box-shadow: 5px 5px 10px var(--detail-color1);
   text-align: left;
 }
 
-.form-input {
+.contact-form-input {
   width: 100%;
   border: 1px solid var(--detail-color1);
   border-radius: .5em;
   font: inherit;
   padding: .5em;
+  background-color: var(--bg-color-header);
+  color: var(--font-color-primary);
+
+  ::placeholder {
+    color: var(--font-color-primary);
+    background-color: var(--bg-color-header);
+  } 
 }
 
 .submit-btn {
@@ -75,7 +82,17 @@
   font-weight: 600;
   padding: 1rem;
   width: 100%;
+  cursor: pointer;
 /*   margin-top: 5rem; */
+  &:hover {
+    background-color: hsl(from var(--accent-color) h s calc(l + 2));
+    color: #fff;
+    transition: 0.2s;
+  }
+  &:active {
+    background-color: hsl(from var(--accent-color) h s calc(l - 2));
+    color: #fff;
+  }
 }
 
 .invalid-input {

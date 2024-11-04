@@ -382,21 +382,19 @@
   padding: 0.6rem;
   font-size: 1rem;
   outline: var(--detail-color3);
-}
-
-input[type=email] {
   color: var(--detail-color3);
   border: 0.5px solid var(--detail-color1);
   border-radius: 7px 0 0 7px;
 }
-input[type=email]:focus {
+
+.form-input:focus {
   background-color: hsl(from var(--accent-color) h s calc(l + 32));
   border-color: var(--accent-color);
   border-right-color: transparent;
   color: black;
 }
 @media (min-width: 1400px) {
-  input[type=email] {
+  .form-input {
     width: 19rem;
   }
 }

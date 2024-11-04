@@ -70,23 +70,23 @@ function ContactForm() {
   }
 
   return (
-    <form className="appointment-form space-y-2" onSubmit={handleSubmit} noValidate>
+    <form className="appointment-form space-y-2" data-aos="fade-left" data-aos-duration="500" onSubmit={handleSubmit} noValidate>
       <h2 className="center">Get Online Consultation</h2>
       <div>
         <label htmlFor="name" className="form-label">Full name</label>
-        <input type="text" id="name" name="fullName" value={formData.fullName} onChange={handleChange} className="form-input" placeholder="Your name" required />
+        <input type="text" id="name" name="fullName" value={formData.fullName} onChange={handleChange} className="contact-form-input" placeholder="Your name" required />
         <p className="invalid-input">{errors.fullName && errors.fullName}</p>
       </div>
 
       <div>
         <label htmlFor="email" className="form-label">Email address</label>
-        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="form-input" placeholder="Your email" required />
+        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="contact-form-input" placeholder="Your email" required />
         <p className="invalid-input">{errors.email && errors.email}</p>
       </div>
 
       <div>
         <label htmlFor="specialist-dropdown" className="form-label">Specialist</label>
-        <select id="specialist-dropdown" name="specialist" value={formData.specialist} onChange={handleChange} className="form-input" required>
+        <select id="specialist-dropdown" name="specialist" value={formData.specialist} onChange={handleChange} className="contact-form-input" required>
           <option className="specialist" value="default">&lt;Select&gt;</option>
           <option className="specialist" value="finance">Finance</option>
           <option className="specialist" value="it">IT-support</option>
