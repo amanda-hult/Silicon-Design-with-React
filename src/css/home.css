@@ -597,6 +597,18 @@ input[type=submit]:active {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .how-to-section {
   background-color: var(--bg-color-secondary);
 }
@@ -608,25 +620,25 @@ input[type=submit]:active {
 .container-how-to h3 {
   padding: 1.5rem 0 0.5rem 0;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container-how-to {
     padding: 3rem 5rem;
   }
   .container-how-to h2 {
     font-size: 2rem;
   }
-}
+} */
 @media (min-width: 768px) and (min-width: 1400px) {
   .container-how-to h2 {
     font-size: 2.5rem;
     line-height: 250%;
   }
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container-how-to p {
     padding: 0 5rem;
   }
-}
+} */
 @media (min-width: 768px) and (min-width: 1400px) {
   .container-how-to p {
     padding: 0 15rem;
@@ -689,78 +701,67 @@ input[type=submit]:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+/*   width: 100%;
   height: 100%;
-  max-width: 700px;
+  max-width: 700px; */
 }
-.carousel input[type=radio] {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+
 
 .card {
   cursor: pointer;
-  width: 60%;
-  margin: auto;
-  transition: transform 0.4s ease;
-  position: absolute;
-  top: auto;
+/*   width: 60%;
+  margin: auto; */
+  position: relative;
+/*   top: auto;
   right: 0;
   bottom: auto;
-  left: 0;
+  left: 0; */
+/*   transition: transform .4s ease; */
 }
 
-.slides {
-  position: relative;
-}
-
-#sc-1:checked ~ .slides #img-3,
-#sc-2:checked ~ .slides #img-1,
-#sc-3:checked ~ .slides #img-2 {
-  transform: translateX(-100%);
-  z-index: 0;
-  opacity: 0.8;
-}
-
-#sc-1:checked ~ .slides #img-2,
-#sc-2:checked ~ .slides #img-3,
-#sc-3:checked ~ .slides #img-1 {
-  transform: translateX(100%);
-  z-index: 0;
-  opacity: 0.8;
-}
-
-#sc-1:checked ~ .slides #img-1,
-#sc-2:checked ~ .slides #img-2,
-#sc-3:checked ~ .slides #img-3 {
-  transform: translateX(0);
+.card-active {
+/*   transform: translateX(0); */
   z-index: 1;
   opacity: 1;
+}
+.card-right {
+/*   transform: translateX(-50%); */
+  z-index: 0;
+  opacity: 0.8;
+/*   transition: transform 1s; */
+}
+.card-left {
+/*   transform: translateX(50%); */
+  z-index: 0;
+  opacity: 0.8;
+/*   transition: transform 1s; */
+}
+
+/* .slides {
+  position: relative;
+} */
+
+.bg-iphone {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .desktop-text {
   min-width: 1320px;
-  align-self: center;
+/*   align-self: center;
   height: 8rem;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
-.info-area {
-  transition: transform 0.4s ease-in-out;
-}
 
-#sc-2:checked ~ .desktop-text #text-slide {
-  transform: translateY(0px);
-}
 
-#sc-2:checked ~ .desktop-text #text-slide {
-  transform: translateY(-120px);
-}
 
-#sc-3:checked ~ .desktop-text #text-slide {
-  transform: translateY(-240px);
-}
+
+
+
+
+
 
 .app-info {
   display: none;

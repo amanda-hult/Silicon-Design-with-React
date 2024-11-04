@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function DarkModeToggle() {
+function DarkModeToggle({ toggleImages }) {
 
   const [darkMode, setdarkMode] = useState(false);
 
@@ -9,25 +9,33 @@ function DarkModeToggle() {
     if (savedTheme === 'dark') {
       setdarkMode(true);
       document.body.classList.add('dark-theme');
-      document.querySelector('#theme-image-apple').src = '/appstore-dark.svg';
-      document.querySelector('#theme-image-google').src = '/googleplay-dark.svg';
+      toggleImages(true);
+
+      // const themeImageApple = document.querySelector('theme-image-apple');
+      // const themeImageGoogle = document.querySelector('theme-image-google');
+      // if (themeImageApple) {
+      //   themeImageApple.src = '/appstore-dark.svg';
+      // }
+      // if (themeImageGoogle) {
+      //   themeImageGoogle.src = '/googleplay-dark.svg';
+      // }
     }
-  }, []);
+  }, [toggleImages]);
   
   const toggleDarkMode = () => {
-    setdarkMode(!darkMode);
+    const newDarkMode = !darkMode;
+    setdarkMode(newDarkMode);
+
     
-    if(!darkMode) {
+    if(newDarkMode) {
       document.body.classList.add('dark-theme');
-      document.querySelector('#theme-image-apple').src = '/appstore-dark.svg';
-      document.querySelector('#theme-image-google').src = '/googleplay-dark.svg';
       localStorage.setItem('theme', 'dark');
     } else {
       document.body.classList.remove('dark-theme');
-      document.querySelector('#theme-image-apple').src = '/appstore.svg';
-      document.querySelector('#theme-image-google').src = '/googleplay.svg';
       localStorage.setItem('theme', 'light');
     }
+
+    toggleImages(newDarkMode);
   }
 
   return (

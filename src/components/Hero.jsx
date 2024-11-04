@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { forwardRef, useEffect } from 'react'
 import { HashLink } from 'react-router-hash-link'
 
-function Hero() {
+const Hero = forwardRef((props, ref) => { 
+
   return (
     <>
-      <section className="hero" id="hero">
+      <section className="hero" id="hero" ref={ref}>
         <div className="frontpage">
           <h1 className="l-heading headline" data-aos="fade-right" aos-duration="600">Manage All Your <br /> Money in One App</h1>
 
@@ -27,6 +28,6 @@ function Hero() {
       </section>
     </>
   )
-}
+});
 
 export default Hero

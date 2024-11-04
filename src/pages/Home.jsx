@@ -1,17 +1,16 @@
 import React from 'react'
-
 import Hero from '../components/Hero'
 import Features from '../components/features/Features'
-import HowTo from '../components/HowTo'
-import AppInfo from '../components/AppInfo'
+import HowTo from '../components//howtosection/HowTo'
+import AppInfo from '../components/appinfo/AppInfo'
 import Reviews from '../components/reviews/Reviews'
 import Faq from '../components/faq/Faq'
 import Subscribe from '../components/subscribe/Subscribe'
 
-function Home() {
+function Home({ heroRef}) {
   return (
     <>
-      <Hero />
+      <Hero ref={heroRef} />
       <Features />
       <HowTo />
       <AppInfo />

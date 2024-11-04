@@ -3,7 +3,7 @@ import DarkModeToggle from './DarkModeToggle'
 import Sidebar from './Sidebar'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ toggleImages }) => {
 
   const location = useLocation();
   const backgroundColor = location.pathname === '/' ? 'var(--bg-color-header)' : 'var(--bg-color-secondary)';
@@ -20,7 +20,7 @@ const Header = () => {
             <NavLink className="nav-link" to="/contact">Contact</NavLink>
           </div>
 
-          <DarkModeToggle />
+          <DarkModeToggle toggleImages={toggleImages} />
 
           <Sidebar />
 
