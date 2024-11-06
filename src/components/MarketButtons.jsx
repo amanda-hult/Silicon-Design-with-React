@@ -1,6 +1,25 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { DarkModeContext } from './contexts/DarkModeContext';
 
-function MarketButtons({ marketButton }) {
+function MarketButtons() {
+  const { darkMode } = useContext(DarkModeContext);
+
+  const marketButton = [
+    {
+      id: 1,
+      src: darkMode ? "/appstore-dark.svg" : '/appstore.svg',
+      alt: "AppStore button",
+      ariaLabel: "App-Store",
+      link: "https://www.apple.com/se/app-store/"
+    },
+    {
+      id: 2,
+      src: darkMode ? '/googleplay-dark.svg' : "/googleplay.svg",
+      alt: "GooglePlay button",
+      ariaLabel: "Google-Play",
+      link: "https://play.google.com/"
+    },
+  ];
 
   return (
     <div className="market-btns">

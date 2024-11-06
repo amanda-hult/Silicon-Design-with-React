@@ -1,6 +1,6 @@
 import React from 'react'
 import Breadcrumbs from '../components/Breadcrumbs'
-import ContactSection from '../contact/ContactSection'
+import ContactSection from '../components/contact/ContactSection'
 import Directions from '../components/directions/Directions'
 
 function Contact() {

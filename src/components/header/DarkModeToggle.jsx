@@ -1,32 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
+import { DarkModeContext } from '../contexts/DarkModeContext';
 
-function DarkModeToggle({ darkModeToggle }) {
-
-  const [darkMode, setdarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      setdarkMode(true);
-      document.body.classList.add('dark-theme');
-      darkModeToggle(true);
-    }
-  }, [darkModeToggle]);
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setdarkMode(newDarkMode);
-    
-    if(newDarkMode) {
-      document.body.classList.add('dark-theme');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-theme');
-      localStorage.setItem('theme', 'light');
-    }
-
-    darkModeToggle(newDarkMode);
-  }
+function DarkModeToggle() {
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
     <div className="dark-mode">

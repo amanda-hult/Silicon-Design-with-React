@@ -3,8 +3,7 @@ import DarkModeToggle from './DarkModeToggle'
 import Sidebar from './Sidebar'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
-const Header = ({ darkModeToggle }) => {
-
+const Header = () => {
   const location = useLocation();
   const backgroundColor = location.pathname === '/' ? 'var(--bg-color-header)' : 'var(--bg-color-header-darkmode)';
 
@@ -12,18 +11,14 @@ const Header = ({ darkModeToggle }) => {
     <>
       <header className="header" style={{backgroundColor}}>
         <nav className="main-navigation" style={{backgroundColor}}>
-
           <div className="logo-container">
             <Link to="/" className="logo-link"><img className="logo-image" src="/silicon-logo.svg" alt="Silicon logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}/></Link>
             <h1 className="s-heading">Silicon</h1>
             <NavLink className="nav-link" to="/">Features</NavLink>
             <NavLink className="nav-link" to="/contact">Contact</NavLink>
           </div>
-
-          <DarkModeToggle darkModeToggle={darkModeToggle}/>
-
+          <DarkModeToggle />
           <Sidebar />
-
           <a id="sign-in-up" className="sign-in-btn" href="#">
             <i className="fa-thin fa-user"></i>
             <span>Sign in / up</span>

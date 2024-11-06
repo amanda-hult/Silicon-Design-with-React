@@ -111,11 +111,11 @@ function ContactForm() {
       <h2 className="center">Get Online Consultation</h2>
       {formFields.map((field) => (
         <div key={field.id}>
-          <label htmlFor={field.for} className="form-label">{field.label}</label>
+          <label htmlFor={field.for}>{field.label}</label>
           {field.type === 'select' ? (
             <select id={field.for} name={field.name} value={formData[field.name]} onChange={handleChange} className="contact-form-input" required={field.required}>
               {field.options?.map((option) => (
-                <option key={option.value} value={option.value} className="specialist">{option.label}</option>
+                <option key={option.value} value={option.value}>{option.label}</option>
                ))}
             </select>
           ) : (

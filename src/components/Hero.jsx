@@ -2,7 +2,7 @@ import React from 'react'
 import { HashLink } from 'react-router-hash-link'
 import MarketButtons from './MarketButtons'
 
-function Hero({ marketButton }) {
+function Hero() {
   return (
     <>
       <section className="hero" id="hero">
@@ -11,7 +11,7 @@ function Hero({ marketButton }) {
 
           <div className="content" data-aos="fade-right" aos-duration="600">
             <p className="l-font">We offer you a new generation of the mobile banking. <br className="line-break" />Save, spend & manage money in your pocket.</p>
-            <MarketButtons marketButton={marketButton}/>
+            <MarketButtons />
             <div>
               <HashLink className="expand" smooth to="/#app-features"><span><i className="arrow-btn fa-regular fa-angle-down"></i></span><span className="s-font discover-more">Discover more</span></HashLink>
             </div>
