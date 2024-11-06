@@ -7,6 +7,7 @@
   --bg-color-tertiary: rgb(226, 229, 241, 0.05);
   --bg-color-quaternary: #fff;
   --bg-color-header: #fff;
+  --bg-color-header-darkmode: #F3F6FF;
   --detail-color1: #E2E5F1;
   --detail-color2: #9397ad;
   --detail-color3: #9397ad;
@@ -23,6 +24,7 @@ body.dark-theme {
   --bg-color-tertiary: rgba(255, 255, 255, 0.05);
   --bg-color-quaternary: rgba(255, 255, 255, 0.04);
   --bg-color-header: rgb(21, 26, 39);
+  --bg-color-header-darkmode: rgb(21, 26, 39);
   --detail-color1: rgba(255, 255, 255, 0.15);
   --detail-color2: #6366F1;
   --detail-color3: #9397ad;
@@ -44,7 +46,7 @@ body.dark-theme {
 }
 
 html, body, #root {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -405,7 +407,13 @@ body {
 }
 
 .header {
-  background-color: grey;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+main {
+  flex: 1;
 }
 
 .main-navigation {

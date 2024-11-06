@@ -75,16 +75,17 @@ function HowToCarousel() {
         
         {displayedCarousel.map((item, index) => (
           <label className="card" key={item.id} onClick={() => !item.isActive && slideItem(displayedCarousel.findIndex((i) => i === item) > displayedCarousel.findIndex((i) => i.isActive) ? 'right' : 'left')}>
-          <img className={`card-${item.position}`} src={item.image} alt="App illustration" />
+          <img className={`card-${item.position}`}src={item.image} alt="App illustration" />
           </label>
         ))}
 
       </div>
 
-      <div className="desktop-text">
+      <div className="desktop-text" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
         {carousel.map((item) => (
           item.isActive && (
-        <div className="info-area" id="text-slide" key={item.id}>
+        <div id="text-slide" key={item.id}>
           <div>
             <h3 className="sm-heading">{item.title}</h3>
             <p>{item.content}</p>

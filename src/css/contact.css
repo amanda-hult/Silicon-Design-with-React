@@ -1,7 +1,12 @@
 .breadcrumb-section {
   background-color: var(--bg-color-secondary);
+  display: none;
 }
+
 @media (min-width: 1400px) {
+  .breadcrumb-section {
+    display: block;
+  }
   .breadcrumb-container {
     max-width: 1320px;
     margin: 0 auto;
@@ -12,6 +17,10 @@
 .contact-us-section {
   background-color: var(--bg-color-secondary);
   text-align: center;
+}
+
+.hero-wrapper {
+  padding: 1.5rem 0;
 }
 
 .contact-header {
@@ -151,7 +160,7 @@
 @media (min-width: 768px) {
   .hero-wrapper {
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr;

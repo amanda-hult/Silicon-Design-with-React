@@ -28,7 +28,7 @@ function SocialIcons() {
   return (
     <div className="socials-container">
       {socialIcon.map((icon) => (
-        <i key={icon.id} className={icon.iconClass} aria-label={icon.altText}></i>
+        <i key={icon.id} className={icon.iconClass} aria-label={icon.altText} data-aos="flip-up"></i>
       ))}
     </div>
   );

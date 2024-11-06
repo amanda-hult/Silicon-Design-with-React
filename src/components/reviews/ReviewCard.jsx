@@ -26,7 +26,7 @@ function ReviewCard() {
         <div key={review.id} className="review-card" data-aos="flip-up" data-aos-duration="800">
           <p className="quote-mark"><i className="fa-sharp fa-solid fa-quote-left"></i></p>
 
-          <div className='stars'>
+          <div>
             {[...Array(5)].map((_, i) => (
               <i key={i} className={`fa-star-sharp ${i < review.starRating ? 'fa-solid yellow-star' : 'fa-light star'}`}
               ></i>

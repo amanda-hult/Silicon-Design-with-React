@@ -18,9 +18,6 @@ function InfoList() {
     },
   ])
 
-
-
-
   return (
     <div className="info-list" data-aos="fade-right">
       <h2 className="m-heading">Make your money <br />transfer simple and clear</h2>

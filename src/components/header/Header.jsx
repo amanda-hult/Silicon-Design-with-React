@@ -6,7 +6,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 const Header = ({ darkModeToggle }) => {
 
   const location = useLocation();
-  const backgroundColor = location.pathname === '/' ? 'var(--bg-color-header)' : 'var(--bg-color-secondary)';
+  const backgroundColor = location.pathname === '/' ? 'var(--bg-color-header)' : 'var(--bg-color-header-darkmode)';
 
   return (
     <>
@@ -14,7 +14,7 @@ const Header = ({ darkModeToggle }) => {
         <nav className="main-navigation" style={{backgroundColor}}>
 
           <div className="logo-container">
-            <Link to="/" className="logo-link"><img className="logo-image" src="/silicon-logo.svg" alt="Silicon logo" /></Link>
+            <Link to="/" className="logo-link"><img className="logo-image" src="/silicon-logo.svg" alt="Silicon logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}/></Link>
             <h1 className="s-heading">Silicon</h1>
             <NavLink className="nav-link" to="/">Features</NavLink>
             <NavLink className="nav-link" to="/contact">Contact</NavLink>

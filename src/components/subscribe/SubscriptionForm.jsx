@@ -7,7 +7,7 @@ function SubscriptionForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const validateInput = (value) => {
-    const emailRegex= /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    const emailRegex= /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/;
     if (value.trim() === '') {
       return 'You need to enter your email address.';
     } else if (!emailRegex.test(value)) {

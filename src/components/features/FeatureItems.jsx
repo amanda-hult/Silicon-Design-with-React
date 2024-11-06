@@ -50,7 +50,7 @@ function FeatureItems() {
   return (
     <>
       {featureItem.map((item) => (
-        <div className="feature" key={item.id}>
+        <div className="feature" key={item.id} data-aos="fade-left">
           <img src={item.icon} alt={item.alt} />
           <div>
             <h3 className="s-heading">{item.title}</h3>

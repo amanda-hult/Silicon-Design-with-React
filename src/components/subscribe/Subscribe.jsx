@@ -8,7 +8,6 @@ function Subscribe() {
         <img src="/notification-icon.svg" alt="Notification icon" />
         <h3 className="s-heading">Subscribe to our newsletter<span className="extended-info"> to stay informed about latest updates</span></h3>
       </div>
-
       <SubscriptionForm />
     </div>
   )
