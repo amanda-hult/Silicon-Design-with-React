@@ -89,31 +89,36 @@ function ContactForm() {
       return
     }
 
-    const resp = await fetch('https://win24-assignment.azurewebsites.net/api/forms/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    });
+    try {
+      const resp = await fetch('https://win24-assignment.azurewebsites.net/api/forms/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
 
-    if (resp.ok) {
-      setSubmitted(true)
-      setFormData({ fullName: '', email: '', specialist: '' })
-      setErrors({});
-    } else {
-      const errorData = await resp.json();
+      if (resp.ok) {
+        setSubmitted(true)
+        setFormData({ fullName: '', email: '', specialist: '' })
+        setErrors({});
+      } else {
+        const errorData = await resp.json();
+        console.error("Form submission failed:", errorData)
+      }
+    } catch (error) {
+      console.log("Network error", error);
     }
   }
 
   return (
     <form className="appointment-form space-y-2" data-aos="fade-left" data-aos-duration="500" onSubmit={handleSubmit} noValidate>
-      <h2 className="center">Get Online Consultation</h2>
+      <h2 className="center l-heading">Get Online Consultation</h2>
       {formFields.map((field) => (
         <div key={field.id}>
-          <label htmlFor={field.for}>{field.label}</label>
+          <label className='bold' htmlFor={field.for}>{field.label}</label>
           {field.type === 'select' ? (
-            <select id={field.for} name={field.name} value={formData[field.name]} onChange={handleChange} className="contact-form-input" required={field.required}>
+            <select id={field.for} name={field.name} value={formData[field.name]} onChange={handleChange} className="contact-form-input opacity80" required={field.required}>
               {field.options?.map((option) => (
                 <option key={option.value} value={option.value}>{option.label}</option>
                ))}

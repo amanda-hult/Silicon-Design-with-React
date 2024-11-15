@@ -9,10 +9,12 @@ function Breadcrumbs() {
     <section className="breadcrumb-section">
       <div className="breadcrumb-container">
         <nav>
-          <ul className='breadcrumbs'>
+          <ul className='breadcrumbs s-font'>
             <li>
               <Link to="/" className='breadcrumb-link'><i className="fa-regular fa-house"></i> Homepage</Link>
-              <span><i className="fa-regular fa-angles-right fa-xs"></i></span>
+            </li>
+            <li>
+              <i className="fa-regular fa-angles-right fa-xs"></i>
             </li>
             {pathnames.map((value, index) => {
               const pathTo = `/${pathnames.slice(0, index + 1).join('/')}`;

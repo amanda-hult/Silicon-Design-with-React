@@ -10,10 +10,10 @@ function Hero() {
           <h1 className="l-heading headline" data-aos="fade-right" aos-duration="600">Manage All Your <br /> Money in One App</h1>
 
           <div className="content" data-aos="fade-right" aos-duration="600">
-            <p className="l-font">We offer you a new generation of the mobile banking. <br className="line-break" />Save, spend & manage money in your pocket.</p>
+            <p className="l-font opacity80">We offer you a new generation of the mobile banking. <br className="line-break" />Save, spend & manage money in your pocket.</p>
             <MarketButtons />
             <div>
-              <HashLink className="expand" smooth to="/#app-features"><span><i className="arrow-btn fa-regular fa-angle-down"></i></span><span className="s-font discover-more">Discover more</span></HashLink>
+              <HashLink className="expand" smooth to="/#app-features"><span><i className="arrow-btn fa-regular fa-angle-down"></i></span><span className="s-font discover-more opacity80">Discover more</span></HashLink>
             </div>
           </div> 
 

@@ -9,7 +9,7 @@ function Faq() {
         <div className="faqs">
           <div className="faq-intro p-tb-1">
             <h2 className="m-heading p-tb-1">Any questions?<br />Check out the FAQs</h2>
-            <p className="l-font">Still have unanswered questions and need to get in touch?</p>
+            <p className="l-font opacity80">Still have unanswered questions and need to get in touch?</p>
           </div>
           <FaqList />
           <div className="btn-mobile">

@@ -33,7 +33,7 @@ function ReviewCard() {
             ))}
           </div>
 
-          <p className="m-font">{review.comment}</p>
+          <p className="m-font opacity80">{review.comment}</p>
           <div className="reviewer">
             <img src={review.avatarUrl} />
             <p className="x-bold">{review.author}<br /><span className="s-font">{review.jobRole}</span></p>

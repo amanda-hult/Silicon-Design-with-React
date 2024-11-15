@@ -25,9 +25,9 @@ function DirectionCard() {
       {direction.map((direction) => (
         <div className="space-y-1" key={direction.id}>
           <h2>{direction.headline}</h2>
-          <p><span><i className='fa-sharp fa-regular fa-location-dot accent space-right'></i></span>{direction.address}<span><a href={direction.mapLink} target='_blank' className='map-link s-font'>Show on map </a></span></p>
-          <p><span><i className="fa-sharp fa-regular fa-phone-volume accent space-right"></i></span> {direction.phone}</p>
-          <p><span><i className="fa-regular fa-clock accent space-right"></i></span><span className="bold"> Mon – Fri:</span>9:00 am – 22:00 am<br /><span className="bold space-left">Sat – Sun:</span> 9:00 am – 20:00 am</p>
+          <p className='opacity80'><span><i className='fa-sharp fa-regular fa-location-dot accent space-right'></i></span>{direction.address}<span><a href={direction.mapLink} target='_blank' className='map-link s-font'>Show on map </a></span></p>
+          <p className='opacity80'><span><i className="fa-sharp fa-regular fa-phone-volume accent space-right"></i></span> {direction.phone}</p>
+          <p className='opacity80'><span><i className="fa-regular fa-clock accent space-right"></i></span><span className="bold"> Mon – Fri:</span>9:00 am – 22:00 am<br /><span className="bold space-left">Sat – Sun:</span> 9:00 am – 20:00 am</p>
         </div>
       ))}
     </>

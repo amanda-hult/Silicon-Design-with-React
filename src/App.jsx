@@ -11,7 +11,9 @@ import DarkModeProvider from './components/contexts/DarkModeContext'
 
 function App() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      disable: 'mobile',
+    });
   }, []);
 
   return (

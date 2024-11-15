@@ -54,7 +54,7 @@ function FeatureItems() {
           <img src={item.icon} alt={item.alt} />
           <div>
             <h3 className="s-heading">{item.title}</h3>
-            <p className="m-font">{item.text}</p>
+            <p className="m-font opacity80">{item.text}</p>
           </div>
         </div>
       ))}

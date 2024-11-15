@@ -12,8 +12,8 @@ const Header = () => {
       <header className="header" style={{backgroundColor}}>
         <nav className="main-navigation" style={{backgroundColor}}>
           <div className="logo-container">
-            <Link to="/" className="logo-link"><img className="logo-image" src="/silicon-logo.svg" alt="Silicon logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}/></Link>
-            <h1 className="s-heading">Silicon</h1>
+            <Link to="/"><img src="/silicon-logo.svg" alt="Silicon logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}/></Link>
+            <Link to="/" className="home-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><h1 className="s-heading">Silicon</h1></Link>
             <NavLink className="nav-link" to="/">Features</NavLink>
             <NavLink className="nav-link" to="/contact">Contact</NavLink>
           </div>

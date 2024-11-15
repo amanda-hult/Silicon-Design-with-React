@@ -33,19 +33,25 @@ function SubscriptionForm() {
       return
     }
 
-    const resp = await fetch ('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formInput)
-    });
+    try {
+      const resp = await fetch ('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formInput)
+      });
 
-    if (resp.ok) {
-      setSubmitted(true);
-      setFormInput({email: ''});
-      setErrors({});
-    } 
+      if (resp.ok) {
+        setSubmitted(true);
+        setFormInput({email: ''});
+        setErrors({});
+      } else {
+        console.log('Failed to subscribe', await resp.json());
+      }
+    } catch (error) {
+      console.log('Network error:', error);
+    }
   }
 
   return (

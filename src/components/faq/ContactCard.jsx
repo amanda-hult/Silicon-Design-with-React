@@ -26,12 +26,12 @@ function ContactCard() {
   return (
     <div className="contact-info p-tb-1">
       {icons.map((icon) => (
-        <div key={icon.id} className={`contact-${icon.type}`} data-aos="flip-up" data-aos-duration="500" >
-          <Link to="/contact" onMouseEnter={() => handleHover(icon.id, true)} onMouseLeave={() => handleHover(icon.id, false)}>
+        <div key={icon.id} className={`contact-${icon.type}`} data-aos="flip-up" data-aos-duration="500"  onMouseEnter={() => handleHover(icon.id, true)} onMouseLeave={() => handleHover(icon.id, false)}>
+          <Link to="/contact">
           <i className={`fa-solid ${icon.type === 'phone' ? 'fa-phone-volume fa-xl' : 'fa-comment-dots fa-2xl'} 
           ${icon.isHovered ? (icon.type === 'phone' ? 'fa-shake fa-hover-show' : 'fa-bounce fa-hover-show') : 'fa-hover-hidden'}`}></i>
           </Link>
-          <p className="s-font">{icon.text}</p>
+          <p className="s-font opacity80">{icon.text}</p>
           <Link to="/contact">Contact us <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></Link>
         </div>
       ))}

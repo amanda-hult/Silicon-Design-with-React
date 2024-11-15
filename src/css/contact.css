@@ -1,19 +1,9 @@
 .breadcrumb-section {
   background-color: var(--bg-color-secondary);
   display: none;
+  padding-top: 2rem;
 }
 
-@media (min-width: 1400px) {
-  .breadcrumb-section {
-    display: block;
-  }
-  .breadcrumb-container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-  }
-
-}
 .contact-us-section {
   background-color: var(--bg-color-secondary);
   text-align: center;
@@ -28,9 +18,16 @@
 }
 .contact-container {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   justify-content: center;
   padding: 1rem;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .contact-card {
@@ -45,7 +42,7 @@
 }
 
 .contact-icon {
-  background-color: var(--bg-color-primary);
+  background-color: var(--bg-color-quaternary);
   border-radius: 50%;
   width: 5rem;
   aspect-ratio: 1;
@@ -61,47 +58,26 @@
 }
 
 .appointment-form {
-  background-color: var(--bg-color-primary);
+  background-color: var(--bg-color-quaternary);
   padding: 1rem;
   border-radius: .5rem;
   box-shadow: 5px 5px 10px var(--detail-color1);
   text-align: left;
 }
 
+body.dark-theme .appointment-form {
+  box-shadow: none;
+}
+
 .contact-form-input {
   width: 100%;
+  min-width: 20rem;
   border: 1px solid var(--detail-color1);
   border-radius: .5em;
   font: inherit;
-  padding: .5em;
-  background-color: var(--bg-color-header);
+  padding: 1em;
+  background-color: var(--bg-color-primary);
   color: var(--font-color-primary);
-
-  ::placeholder {
-    color: var(--font-color-primary);
-    background-color: var(--bg-color-header);
-  } 
-}
-
-.submit-btn {
-  background-color: var(--accent-color);
-  color: #fff;
-  border: none;
-  border-radius: .5em;
-  font-weight: 600;
-  padding: 1rem;
-  width: 100%;
-  cursor: pointer;
-/*   margin-top: 5rem; */
-  &:hover {
-    background-color: hsl(from var(--accent-color) h s calc(l + 2));
-    color: #fff;
-    transition: 0.2s;
-  }
-  &:active {
-    background-color: hsl(from var(--accent-color) h s calc(l - 2));
-    color: #fff;
-  }
 }
 
 .invalid-input {
@@ -130,9 +106,6 @@
   height: 100%;
   left: 0;
   top: 0;
-
-/*   grid-column: 1 / 2;
-  grid-row: 1 / -1; */
 }
 
 .map-link[target="_blank"]::after {
@@ -150,24 +123,41 @@
   justify-content: center;
 }
 .social-icon {
-  /* background-color: #eff2fc; */
   background-color: var(--bg-color-primary);
-  padding: .5rem;
+  padding: .75rem;
   border-radius: .3em;
   margin: 1rem;
+
+  &:hover {
+    box-shadow: 0 0 7px 2px var(--detail-color1);
+    transition: 0.1s ease;
+  }
 }
 
+@media (min-width: 1400px) {
+  .breadcrumb-section {
+    display: block;
+  }
+  .breadcrumb-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+  }
+  
 @media (min-width: 768px) {
   .hero-wrapper {
     margin: 0 auto;
     padding: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 1fr;
-    gap: 2rem;
+    display: flex;
+    gap: 1rem;
     align-items: center;
-    grid-template-areas: "contact-header contact-header"
-                          "contact-container contact-form";
+    justify-content: space-evenly;
   }
 
   .contact-container {
@@ -208,6 +198,9 @@
   .hero-wrapper {
     max-width: 1320px;
     position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0;
     grid-template-areas: "contact-header contact-form"
                          "contact-container contact-form";
   }
@@ -218,6 +211,11 @@
 
   .contact-container {
     padding: 0;
+    margin-bottom: 7rem;
+  }
+
+  .content-container {
+    margin-top: 3rem;
   }
 
   .contact-card {
@@ -230,22 +228,23 @@
 
   .contact-icon {
     width: 4rem;
+
+    &:hover {
+      box-shadow: 0 0 15px 3px var(--detail-color1);
+      transition: 0.2s ease;
+    }
   }
 
   .form-container {
-    position: relative;
-    bottom: -5rem;
+    position: absolute;
     right: 5rem;
+    top: 0;
   }
 
   .appointment-form {
-    padding: 4.5rem;
+    padding: 3rem 4.5rem;
   }
-  .submit-btn {
-    margin-top: 7rem;
-  }
-
-
+  
   .wrapper {
     max-width: 1320px;
     margin: 0 auto;

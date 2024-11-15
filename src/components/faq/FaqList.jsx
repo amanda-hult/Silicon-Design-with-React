@@ -33,17 +33,16 @@ function FaqList() {
     <div className="faq-container m-tb-1">
       {questions.map((question) => (
         <div key={question.id}>
-          <div className="question" onClick={() => showAnswer(question.id)}>
+          <div className={`question ${expanded.includes(question.id) ? 'question-active' : ''}`} onClick={() => showAnswer(question.id)}>
             <h3 className="m-font bold">{question.title}</h3>
             <span className={expanded.includes(question.id) ? 'close active' : 'open active'}>
               <i className={expanded.includes(question.id) ? 'arrow-up fa-regular fa-angle-down fa-flip-vertical' : 'arrow-down fa-regular fa-angle-down'}></i>
             </span>
+            {expanded.includes(question.id) && (
+            <div className="answer s-font opacity80" style={{ display: 'block'}}>
+              <p>{question.content}</p>
+            </div>)}
           </div>
-
-          {expanded.includes(question.id) && (
-            <div className="answer s-font" style={{ display: 'block'}}>
-            <p>{question.content}</p>
-          </div>)}
         </div>
       ))}
     </div>

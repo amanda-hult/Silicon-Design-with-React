@@ -24,18 +24,21 @@ function ContactCard() {
   return (
 
     <div className="contact-container">
-      {contactCard.map((card) => (
-        <div key={card.id} className="contact-card">
-          <div className="contact-icon" data-aos="flip-down" data-aos-duration="500">
-            <img src={card.icon} />
+      <h1 className="xl-heading contact-header">Contact Us</h1>
+      <div className='content-container'>
+        {contactCard.map((card) => (
+          <div key={card.id} className="contact-card">
+            <div className="contact-icon" data-aos="flip-down" data-aos-duration="500">
+              <img src={card.icon} />
+            </div>
+            <div>
+              <h2 className="sm-heading">{card.headline}</h2>
+              <p className="hide-mobile p-tb-1 opacity80">{card.contentPt1}<br className="hide-mobile opacity80" />{card.contentPt2}</p>
+              <p className="accent bold hover hover-accent">{card.text}<span><i className="fa-regular fa-arrow-right"></i></span></p>
+            </div>
           </div>
-          <div>
-            <h2 className="sm-heading">{card.headline}</h2>
-            <p className="hide-mobile p-tb-1">{card.contentPt1}<br className="hide-mobile" />{card.contentPt2}</p>
-            <p className="accent p-tb-1 bold hover">{card.text}<span><i className="fa-regular fa-arrow-right"></i></span></p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

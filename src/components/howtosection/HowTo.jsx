@@ -22,7 +22,7 @@ function HowTo() {
 
           <div className="mobile-text">
               <h3 className="s-heading mobile-text">Transfer to people from your contact list</h3>
-              <p className="m-font mobile-text">Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+              <p className="m-font mobile-text opacity80">Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
           </div>
 
           <div className="sc-pics-desktop p-tb-1">

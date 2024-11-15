@@ -21,7 +21,7 @@ function PaymentDetails() {
       {paymentDetails.map((card) => (
         <div className="payment-info" key={card.id}>
           <img src={card.image} />
-          <p className="m-font">{card.text}</p>
+          <p className="m-font opacity80">{card.text}</p>
         </div>
       ))}
       <HashLink smooth to="/#hero" className="learn-more-btn">Learn more <span><i className="fa-sharp fa-solid fa-arrow-right"></i></span></HashLink>
