@@ -14,7 +14,6 @@ function ContactForm() {
       type: 'text',
       name: 'fullName',
       placeholder: 'Your name',
-      required: true
     },
     {
       id: 2,
@@ -23,7 +22,6 @@ function ContactForm() {
       type: 'email',
       name: 'email',
       placeholder: 'Your email',
-      required: true
     },
     {
       id: 3,
@@ -32,7 +30,6 @@ function ContactForm() {
       type: 'select',
       name: 'specialist',
       placeholder: '<Select>',
-      required: true,
       options: [
         { value: 'default', label: '<Select>'},
         { value: 'finance', label: 'Finance'},
@@ -115,16 +112,16 @@ function ContactForm() {
     <form className="appointment-form space-y-2" data-aos="fade-left" data-aos-duration="500" onSubmit={handleSubmit} noValidate>
       <h2 className="center l-heading">Get Online Consultation</h2>
       {formFields.map((field) => (
-        <div key={field.id}>
+        <div key={field.id} className='form-group'>
           <label className='bold' htmlFor={field.for}>{field.label}</label>
           {field.type === 'select' ? (
-            <select id={field.for} name={field.name} value={formData[field.name]} onChange={handleChange} className="contact-form-input opacity80" required={field.required}>
+            <select id={field.for} name={field.name} value={formData[field.name]} onChange={handleChange} className="contact-form-input opacity80" required>
               {field.options?.map((option) => (
                 <option key={option.value} value={option.value}>{option.label}</option>
                ))}
             </select>
           ) : (
-          <input type={field.type} id={field.for} name={field.name} value={formData[field.name]} onChange={handleChange} className="contact-form-input" placeholder={field.placeholder} required={field.required} />
+          <input type={field.type} id={field.for} name={field.name} value={formData[field.name]} onChange={handleChange} className="contact-form-input" placeholder={field.placeholder} required />
           )}
           <p className="invalid-input">{errors[field.name] && errors[field.name]}</p>
         </div>

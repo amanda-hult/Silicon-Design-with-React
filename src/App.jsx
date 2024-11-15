@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DarkModeProvider from './components/contexts/DarkModeContext'
+import ScrollToTopButton from './components/ScrollToTopButton'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Route path="/contact" element={<Contact />}/>
             </Routes>
           </main>
+          <ScrollToTopButton />
           <Footer />
       </BrowserRouter>
     </DarkModeProvider>
